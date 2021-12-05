@@ -5,7 +5,7 @@ var mysql = require('mysql');
 var mysql_setting = {
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'passwordPASSWORD@999',
   database: 'myboard'
 };
 
