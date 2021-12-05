@@ -60,7 +60,8 @@ router.post('/add', (req, res, next) => {
 
   //データを登録する
   // connection.query('insert into mydata set ?', data, function (error, results, fields) {
-  connection.query('insert into mydata values ?', data, function (error, results, fields) {
+  // connection.query('insert into mydata (name,mail,age) value ?', data, function (error, results, fields) {
+  connection.query('insert into mydata (name,mail,age) value ("'+ data.name +' ", ' + ' " '+ data.mail +'", ' + ' '+ data.age +')', data, function (error, results, fields) {
     res.redirect('/');
   });
   //接続を解除
